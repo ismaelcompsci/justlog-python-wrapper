@@ -8,26 +8,27 @@ reference: https://www.pretzellogix.net/2021/12/08/how-to-write-a-python3-sdk-li
 
 ENDPOINTS: 
 X   /channel/{channel}
-    /channel/{channel}/random  
+X   /channel/{channel}/random  
 X   /channel/{channel}/user/{username}
 X   /channel/{channel}/user/{username}/random
 X   /channel/{channel}/user/{username}/{year}/{month}
-    /channel/{channel}/userid/{userid}
-    /channel/{channel}/userid/{userid}/random
-    /channel/{channel}/userid/{userid}/{year}/{month}
+    # /channel/{channel}/userid/{userid}
+    # /channel/{channel}/userid/{userid}/random
+    # /channel/{channel}/userid/{userid}/{year}/{month}
 X   /channel/{channel}/{year}/{month}/{day}  
-    /channelid/{channelid}/random
-    /channelid/{channelid}/user/{username}
-    /channelid/{channelid}/user/{username}/{year}/{month}
-    /channelid/{channelid}/user/{user}/random
-    /channelid/{channelid}/userid/{userid}
-    /channelid/{channelid}/userid/{userid}/random
-    /channelid/{channelid}/userid/{userid}/{year}/{month}
+    # /channelid/{channelid}/random
+    # /channelid/{channelid}/user/{username}
+    # /channelid/{channelid}/user/{username}/{year}/{month}
+    # /channelid/{channelid}/user/{user}/random
+    # /channelid/{channelid}/userid/{userid}
+    # /channelid/{channelid}/userid/{userid}/random
+    # /channelid/{channelid}/userid/{userid}/{year}/{month}
 X   /list
 X   /channels
 """
 CHANNEL_LOGS = "/channel/{}"
 CHANNEL_DATE_LOGS = "/channel/{}/{}/{}/{}"
+CHANNEL_RANDOM = "/channel/{}/random"
 
 CHANNEL_USERNAME_LOGS = "/channel/{}/user/{}"
 CHANNEL_USERNAME_RANDOM_LOGS = "/channel/{}/user/{}/random"

@@ -1,4 +1,6 @@
+from requests import request
 from justlogswrapper import *
+from justlogswrapper import jsLogsAdapter
 import json
 
 
@@ -66,11 +68,29 @@ def test_download_channel_user_logs():
             f.write(json.dumps(log["result"].data, indent=4))
 
 
+def test_channel_random():
+    url = "https://logs.ivr.fi/channel/39daph/random"
+    resp = request("GET", url=url, params={"json": "json"})
+    print(resp.json())
+
+
+def test_build_endpoint():
+    ad = jsLogsAdapter()
+    l = ad.get(
+        "/channel/xqc/userid/184903421",
+    )
+    print(l.status_code)
+    print(l.message)
+    print(l.data)
+
+
 # test_channel_logs()
 # test_user_logs()
 # test_channels()
 # test_list()
 # test_channel_id()
 # log_yield_er()
-test_download_all_logs()
+# test_download_all_logs()
 # test_download_channel_user_logs()
+# test_channel_random()
+test_build_endpoint()
